@@ -1,4 +1,4 @@
-title: C++ Tutorial for the Mac User: Include self-defined header files
+title: C++ Tutorial for the Mac User, Include self-defined header files
 date: 2014-03-17 08:11:26
 tags: [linux, c++]
 ---
