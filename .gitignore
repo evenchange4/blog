@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+db.json
+## 以下為自訂
+.deploy
+public/*
+## 2.0
+*.log

@@ -1,0 +1,88 @@
+# Hexo Configuration
+## Docs: http://zespia.tw/hexo/docs/configure.html
+## Source: https://github.com/tommy351/hexo/
+
+# Site
+title: Michael Hsu.tw
+subtitle: Try to Keep everything in Mind
+description: 一個喜歡網頁開發（Web developer）以及網路資料探勘（Mining）的部落客。
+author: Michael Hsu
+email: evenchange4@gmail.com
+language: en
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://michaelhsu.tw/
+root: /
+permalink: :year/:month/:day/:title/
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+
+# Writing
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+default_layout: post
+auto_spacing: false # Add spaces between asian characters and western characters
+titlecase: false # Transform title into titlecase
+max_open_file: 100
+filename_case: 1
+external_link: true # 在新分頁開啟外部連結
+multi_thread: true  # 多線程 generate
+highlight:
+  enable: true
+  line_number: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+# Server
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+port: 4000
+logger: true
+logger_format: tiny
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: MMMM DD, YYYY
+time_format: H:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 6
+pagination_dir: page
+
+# Disqus
+disqus_shortname: michaelhsutwblog
+
+# Extensions
+## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
+## Themes: https://github.com/tommy351/hexo/wiki/Themes
+theme: landscape
+exclude_generator:
+
+# Deployment
+## Docs: http://zespia.tw/hexo/docs/deploy.html
+deploy:
+  type: github
+  repository: git@github.com:evenchange4/evenchange4.github.com.git
+  branch: master
+
+# Plugin
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
