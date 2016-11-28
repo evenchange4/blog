@@ -1,0 +1,122 @@
+.archives-wrap
+  margin: block-margin 0
+
+.archives
+  clearfix()
+
+.archive-year-wrap
+  margin-bottom: 1em
+
+.archive-year
+  @extend $block-caption
+
+.archives
+  column-gap: 10px
+  @media mq-tablet
+    column-count: 2
+  @media mq-normal
+    column-count: 3
+
+.archive-article
+  avoid-column-break()
+
+.archive-article-inner
+  @extend $block
+  padding: 10px
+  margin-bottom: 15px
+
+.archive-article-title
+  text-decoration: none
+  font-weight: bold
+  color: color-default
+  transition: color 0.2s
+  line-height: line-height
+  &:hover
+    color: color-link
+
+.archive-article-footer
+  margin-top: 1em
+
+.archive-article-date
+  color: color-grey
+  text-decoration: none
+  font-size: 0.85em
+  line-height: 1em
+  margin-bottom: 0.5em
+  display: block
+
+#page-nav
+  clearfix()
+  margin: block-margin auto
+  background: #fff
+  box-shadow: 1px 2px 3px #ddd
+  border: 1px solid color-border
+  border-radius: 3px
+  text-align: center
+  color: color-grey
+  overflow: hidden
+  a, span
+    padding: 10px 20px
+  a
+    color: color-grey
+    text-decoration: none
+    &:hover
+      background: color-grey
+      color: #fff
+  .prev
+    float: left
+  .next
+    float: right
+  .page-number
+    display: inline-block
+    @media mq-mobile
+      display: none
+  .current
+    color: color-default
+    font-weight: bold
+  .space
+    color: color-border
+
+//toc
+.toc-article
+  background #f8f8f8
+  margin 2em 0 0 0.5em
+  padding 1em
+  strong
+    padding 0.3em 0
+    color: color-default
+    font-weight: bold
+#toc
+  line-height 1em
+  font-size 0.8em
+  float right
+  .toc
+    padding 0 
+    li
+      list-style-type none
+  .toc-child 
+    padding-left 1.5em
+
+#toc.toc-aside
+  display none
+  width 13%
+  position fixed
+  right 2%
+  top 320px
+  overflow hidden
+  line-height 1.5em
+  font-size 1em
+  color color-heading
+  opacity .6
+  transition opacity 1s ease-out
+  strong
+    padding 0.3em 0
+
+  &:hover
+    transition opacity .3s ease-out
+    opacity 1
+  a
+    transition color 1s ease-out
+    &:hover
+      color color-theme
+      transition color .3s ease-out

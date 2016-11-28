@@ -1,0 +1,34 @@
+# config
+# cover: //blog.ghost.org/content/images/2013/Nov/cover.png
+logo: http://www.gravatar.com/avatar/66799cbbe4d891ad4eca39b95119fe18?s=100
+bio: 'A designer, developer and entrepreneur. Spends his time travelling the world with a bag of kites. Likes journalism and publishing platforms.'
+
+
+menu:
+  # Home: /
+  # Archives: /archives
+  About: http://about.michaelhsu.tw/
+  Subscription: http://feedburner.google.com/fb/a/mailverify?uri=michael-hsu-tw
+rss: http://feeds.feedburner.com/michael-hsu-tw 
+# rss: /atom.xml
+
+# Content
+excerpt_link: false
+more: true
+fancybox: true
+toc: Outline
+
+# Sidebar
+sidebar: bottom
+widgets:
+- category
+- tag
+# - recent_posts
+# - tagcloud
+# - archive
+
+# Miscellaneous
+google_analytics: UA-33845990-9
+favicon: /favicon.ico
+twitter: evenchange4
+google_plus:

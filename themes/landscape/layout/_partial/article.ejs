@@ -1,0 +1,79 @@
+<!-- ADDTHIS BUTTON BEGIN -->
+<script type="text/javascript">
+var addthis_config = {
+     pubid: "ra-539897a6557cac2a"
+}
+</script>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+<!-- ADDTHIS BUTTON END -->
+
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <%- partial('post/category') %>
+  </div>
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <br>
+      </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <% if (theme.more){ %>
+          <%- post.excerpt %>
+        <% } %>
+
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- config.root %><%- post.path %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <% if (theme.toc){ %>
+          <div id="toc" class="toc-article">
+            <strong class="toc-title"><%= theme.toc %></strong>
+              <%- toc(post.content) %>
+            </div>
+        <% } %>
+
+        <%- post.content %>
+        <% if (post.comments){ %>
+          <!-- Go to your Addthis.com Dashboard to update any options -->
+          <div class="addthis_native_toolbox" style="z-index: 1"></div>
+        <% } %>
+      <% } %>
+    </div>
+    
+    <div class="article-footer">      
+      <a class="article-date" href="<%- config.root %><%- post.path %>" target="_blank" itemprop="url"> Read on</a>
+      <% if (post.comments && config.disqus_shortname){ %>
+        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+      <% } %>
+      <%- partial('post/tag',  {class_name: 'article-date'}) %>
+    </div>
+<!--     <footer class="article-footer">
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
+      <% if (post.comments && config.disqus_shortname){ %>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+      <% } %>
+      <%- partial('post/tag',  {class_name: 'article-date'}) %>
+    </footer> -->
+
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>
